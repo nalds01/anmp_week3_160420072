@@ -44,6 +44,7 @@ class GameFragment : Fragment() {
         btnSubmit.setOnClickListener {
             if(add == answer.toInt()){
 
+
                 score+=1
                 var rand1 = (0..100).random()
                 var rand2 = (0..100).random()
