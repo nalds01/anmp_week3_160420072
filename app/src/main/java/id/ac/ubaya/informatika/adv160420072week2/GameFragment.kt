@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
+import kotlin.math.log
 
 /**
  * A simple [Fragment] subclass.
@@ -37,22 +38,21 @@ class GameFragment : Fragment() {
         txtNum2.setText(rand2.toString())
 
         var add = rand1+rand2
-        val txtNumAdd = view.findViewById<TextView>(R.id.txtNumAdd)
-        var answer = txtNumAdd.text.toString()
+        val txtNumAdd = view.findViewById<EditText>(R.id.txtNumAdd)
+        //var answer = txtNumAdd.text.toString()
         val btnSubmit = view.findViewById<Button>(R.id.btnSubmit)
         var score = 0
+
         btnSubmit.setOnClickListener {
-            if(add == answer.toInt()){
-
-
+            //Toast.makeText(this.context, txtNumAdd, Toast.LENGTH_SHORT).show()
+            if(add.toString() == txtNumAdd.text.toString()){
                 score+=1
-                var rand1 = (0..100).random()
-                var rand2 = (0..100).random()
+                var rand1 = (0..20).random()
+                var rand2 = (0..20).random()
                 txtNum1.setText(rand1.toString())
                 txtNum2.setText(rand2.toString())
+                add = rand1+rand2
 
-                var add = rand1+rand2
-                var txtNumAdd = view.findViewById<TextView>(R.id.txtNumAdd)
             }
             else{
                 val action = GameFragmentDirections.actionResultFragment(score)
