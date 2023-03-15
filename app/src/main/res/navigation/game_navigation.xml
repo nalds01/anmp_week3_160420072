@@ -14,6 +14,9 @@
             android:id="@+id/actionGameFragment"
             app:destination="@id/gameFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/actionOptionFragment"
+            app:destination="@id/optionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -52,4 +55,9 @@
         android:name="id.ac.ubaya.informatika.adv160420072week2.ProfileFragmnet"
         android:label="fragment_profile_fragmnet"
         tools:layout="@layout/fragment_profile_fragmnet" />
+    <dialog
+        android:id="@+id/optionFragment"
+        android:name="id.ac.ubaya.informatika.adv160420072week2.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
 </navigation>
