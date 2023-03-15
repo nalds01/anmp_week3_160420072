@@ -52,7 +52,6 @@ class GameFragment : Fragment() {
                 txtNum1.setText(rand1.toString())
                 txtNum2.setText(rand2.toString())
                 add = rand1+rand2
-
             }
             else{
                 val action = GameFragmentDirections.actionResultFragment(score)
